@@ -4,7 +4,7 @@ const STORAGE_KEY = "ai_tutor_profile_settings";
 
 /** Outer page chrome + Learning Mode chat panel (dialog) surface — paired for readability. */
 const THEME: Record<PageBackgroundId, { page: string; chat: string }> = {
-  default: { page: "#f2e9df", chat: "#fffaf3" },
+  default: { page: "#28140d", chat: "#fffaf3" },
   mint: { page: "#e0f2f0", chat: "#f5fdfb" },
   dark: { page: "#1e293b", chat: "#fefefe" },
   warm: { page: "#f5f0e8", chat: "#fffdf9" },

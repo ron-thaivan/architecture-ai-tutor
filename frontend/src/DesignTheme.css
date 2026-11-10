@@ -3,7 +3,7 @@
   --design-espresso: #28140d;
   --design-clay: #a95536;
   --design-cream: #fffaf3;
-  --design-paper: var(--app-page-bg, #f2e9df);
+  --design-paper: var(--app-page-bg, #28140d);
   --app-chat-panel-bg: inherit;
   --design-muted: #79665a;
   --design-rule: #d9c8b9;
@@ -27,6 +27,35 @@
 .app-container.design-theme button:disabled { cursor: not-allowed; opacity: .55; }
 .app-container.design-theme :is(input[type=checkbox], input[type=radio]) { accent-color: var(--design-clay); }
 .app-container.design-theme ::selection { background: #e8b99a; color: #28140d; }
+/* Apply the portfolio's type and materials to the working surfaces themselves. */
+.app-container.design-theme :is(.studio-page, .learning-page-wrapper, .gr-page, .autograder-page, .profile-page, .my-learning-bar-page) {
+  font-family: 'DM Sans', 'Noto Sans Telugu', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.app-container.design-theme .content :is(h2, h3) { font-family: 'DM Sans', 'Noto Sans Telugu', sans-serif; font-weight: 500; letter-spacing: -.035em; }
+.app-container.design-theme .studio-page { color: #f3dfcf; }
+.app-container.design-theme :is(.studio-card, .studio-project-controls, .studio-item) { color: #38271e; }
+.app-container.design-theme .studio-primary-tabs { background: #42291e; border-color: #79533e; padding: 6px; }
+.app-container.design-theme .studio-primary-tabs button { color: #edcfb8; font-size: 14px; letter-spacing: -.02em; }
+.app-container.design-theme .studio-primary-tabs button[aria-pressed="true"] { background: #e3b493; color: #28140d; border-color: #e3b493; }
+.app-container.design-theme .studio-primary-tabs button:hover:not(:disabled) { background: #6c4834; color: #fffaf3; }
+.app-container.design-theme :is(.studio-status, .studio-storage-note, .studio-activity-picker label) { color: #d5b9a3; }
+.app-container.design-theme .studio-activity-picker select { background: #42291e; color: #fff0e4; border-color: #8b644c; }
+.app-container.design-theme .studio-card { border: 0; box-shadow: 0 16px 36px #140b0820; }
+.app-container.design-theme .studio-card :is(input:not([type=checkbox]):not([type=radio]), textarea, select) { background: #f5e9dd; border: 1px solid #cdb39d; border-radius: 12px; font-size: 15px; }
+.app-container.design-theme .studio-card label { font-size: 14px; letter-spacing: -.015em; }
+.app-container.design-theme :is(.studio-card button, .autograder-submit) { font-weight: 500; letter-spacing: -.015em; }
+.app-container.design-theme .studio-card button:not(.studio-secondary) { background: #995437; border-color: #995437; }
+.app-container.design-theme .studio-card button:hover:not(:disabled):not(.studio-secondary) { background: #6d3825; }
+.app-container.design-theme :is(.studio-item, .studio-exercise-fold, .autograder-panel) { background: #f1dfcf; border-color: #d9bda5; }
+.app-container.design-theme .studio-exercise-fold > summary { padding: 18px; font-size: 16px; font-weight: 500; letter-spacing: -.025em; }
+.app-container.design-theme .gr-page { background: #fffaf3; border-radius: 20px; --mono: 'DM Sans', sans-serif; }
+.app-container.design-theme .content > .my-learning-bar-page { background: #fffaf3; padding: 28px; border-radius: 20px; box-sizing: border-box; width: 100%; }
+.app-container.design-theme :is(.chat-example-chip, .reset-box button, .autograder-panel, .gr-btn, .my-learning-bar-page button) { font-family: 'DM Sans', 'Noto Sans Telugu', sans-serif; letter-spacing: -.015em; }
+.app-container.design-theme .chat-example-chip { font-size: 14px; line-height: 1.5; }
+.app-container.design-theme .chat-input-text { font-size: 16px; }
+.app-container.design-theme .markdown-message { font-family: 'DM Sans', 'Noto Sans Telugu', sans-serif; font-size: 15px; line-height: 1.7; }
 .app-container.design-theme * { scrollbar-width: thin; scrollbar-color: #c5a68f transparent; }
 
 /* An understated, permanent workspace rail. */
@@ -108,7 +137,7 @@
   --hand: 'DM Sans', sans-serif;
   max-width: 1080px; padding: 16px 8px 64px;
 }
-.app-container.design-theme .content:has(.gr-page) { background: #f2e9df; }
+.app-container.design-theme .content:has(.gr-page) { background: var(--design-paper); }
 .app-container.design-theme .gr-head { background: #28140d; padding: 32px; border-radius: 16px; color: #fffaf3; }
 .app-container.design-theme :is(.gr-title, .gr-term, .gr-eyebrow) { color: #d9b8a1; }
 .app-container.design-theme .gr-course { font-size: clamp(28px, 3.7vw, 48px); font-weight: 550; letter-spacing: -.03em; color: #fffaf3; }
