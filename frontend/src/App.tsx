@@ -16,6 +16,7 @@ import { useAuth } from "./context/AuthContext";
 
 import "./App.css";
 import "./LearningTheme.css";
+import "./DesignTheme.css";
 
 function AppShell() {
   const showDeployWarning = apiBlockedByMixedContent();
@@ -25,7 +26,7 @@ function AppShell() {
   const isHome = location.pathname === "/";
 
   return (
-    <div className={`app-container${isHome ? " app-container--home" : ""}${["/learning", "/studio", "/grades", "/autograder"].includes(location.pathname) ? " app-container--studio-theme" : ""}`}>
+    <div className={`app-container design-theme app-container--studio-theme${isHome ? " app-container--home" : ""}`}>
       {!isHome && <Sidebar />}
       <div className="app-main">
         {!isHome && showDeployWarning ? (

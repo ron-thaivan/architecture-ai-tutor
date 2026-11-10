@@ -1,0 +1,200 @@
+/* Espresso / clay. A shared visual layer; route behavior stays in its components. */
+.app-container.design-theme {
+  --design-espresso: #28140d;
+  --design-clay: #a95536;
+  --design-cream: #fffaf3;
+  --design-paper: var(--app-page-bg, #f2e9df);
+  --app-chat-panel-bg: inherit;
+  --design-muted: #79665a;
+  --design-rule: #d9c8b9;
+  --learn-paper: var(--design-paper);
+  --learn-surface: var(--design-cream);
+  --learn-ink: var(--design-espresso);
+  --learn-muted: var(--design-muted);
+  --learn-line: var(--design-rule);
+  --learn-sage: #efddd0;
+  --learn-green: #713d29;
+  --learn-accent: var(--design-clay);
+  color: var(--design-espresso);
+  background: var(--design-espresso);
+  font-family: 'DM Sans', 'Noto Sans Telugu', sans-serif;
+}
+.app-container.design-theme:not(.app-container--home) .app-main { background: var(--design-paper); }
+.app-container.design-theme.app-container--home .content { display: block; overflow-y: auto; padding: 0; }
+.app-container.design-theme:not(.app-container--home) .content { padding: 24px 28px; background: var(--design-paper); }
+.app-container.design-theme :is(button, input, select, textarea) { font-family: inherit; }
+.app-container.design-theme :is(button, a, summary, input, select, textarea):focus-visible { outline: 3px solid #b96842; outline-offset: 4px; }
+.app-container.design-theme button:disabled { cursor: not-allowed; opacity: .55; }
+.app-container.design-theme :is(input[type=checkbox], input[type=radio]) { accent-color: var(--design-clay); }
+.app-container.design-theme ::selection { background: #e8b99a; color: #28140d; }
+.app-container.design-theme * { scrollbar-width: thin; scrollbar-color: #c5a68f transparent; }
+
+/* An understated, permanent workspace rail. */
+.app-container.design-theme .sb {
+  --sb-w: 276px;
+  --tealb: #edb897;
+  --teal: #ce916d;
+  background: #28140d;
+  border-color: #513429;
+  color: #e4d0c1;
+}
+.app-container.design-theme .sb-top { padding: 25px 16px 24px; gap: 6px; border-bottom: 1px solid #50362c; }
+.app-container.design-theme .sb-brand-name { font-family: inherit; font-size: 17px; font-weight: 650; letter-spacing: -.03em; color: #fffaf3; }
+.app-container.design-theme .sb-brand-mark { background: transparent; border: 1px solid #bc8b6c; color: #edb897; border-radius: 50%; font-family: inherit; }
+.app-container.design-theme .sb-tour-btn { padding: 6px 8px; background: transparent; border-color: #72503e; color: #edc9b1; }
+.app-container.design-theme .sb-tour-label { font-size: 10px; }
+.app-container.design-theme .sb-shell { padding: 20px 14px 12px; }
+.app-container.design-theme .sb-group-label { color: #b89b86; font-family: inherit; font-size: 10px; letter-spacing: .19em; padding-bottom: 12px; }
+.app-container.design-theme .sb-group-label--gap { margin-top: 24px; }
+.app-container.design-theme :is(.sb-link, .sb-section-head) { color: #e1cabb; padding: 12px; border-radius: 8px; font-size: 13px; }
+.app-container.design-theme :is(.sb-link.is-active, .sb-hist-item.is-active) { background: #f0d7c2; color: #382016; }
+.app-container.design-theme .sb-link.is-active::before { background: #a95536; }
+.app-container.design-theme :is(.sb-link, .sb-section-head, .sb-hist-item, .sb-tour-btn, .sb-toggle):hover { background: #523526; color: #fffaf3; }
+.app-container.design-theme :is(.sb-empty, .sb-hist-time, .sb-hist-label, .sb-user-name) { color: #c7a991; }
+.app-container.design-theme :is(.sb-newchat, .sb-signin) { background: transparent; border: 1px solid #88634d; color: #f4ddcc; border-radius: 999px; }
+.app-container.design-theme :is(.sb-newchat, .sb-signin):hover { background: #60402c; color: #fffaf3; }
+.app-container.design-theme .sb-footer { border-color: #50362c; padding: 18px; }
+.app-container.design-theme .sb--collapsed .sb-top { padding: 14px 0; }
+.app-container.design-theme .sb--collapsed .sb-shell { padding: 10px 6px; }
+.app-container.design-theme .sb--collapsed :is(.sb-link, .sb-section-head, .sb-signin) { padding: 11px 0; }
+.app-container.design-theme .sb--collapsed .sb-footer { padding: 12px 6px; }
+.app-container.design-theme .sb-avatar--empty { background: #63412d; color: #ffead8; }
+.app-container.design-theme .sb-progress-embed :is(.my-learning-bar-page, .my-learning-bar-page--embed) { background: transparent; color: #ead8c8; }
+.app-container.design-theme .sb-progress-embed :is(.my-learning-bar-title, .my-learning-bar-book-link, .focs-node__label, a) { color: #ead8c8; }
+.app-container.design-theme .sb-progress-embed :is(.my-learning-bar-meta, .my-learning-bar-status, .focs-node__range, small) { color: #c8aa94; }
+.app-container.design-theme .sb-progress-embed .focs-node__label:hover { background: #533526; color: #fffaf3; }
+.app-container.design-theme .sb-progress-resize { border-color: #71523e; }
+.app-container.design-theme .sb-progress-resize::after { background: #a67e60; }
+.app-container.design-theme .auth-prompt { background: #e8d9ca; border-color: #d5c1af; }
+.app-container.design-theme :is(.auth-prompt-text, .auth-prompt-lock, .auth-prompt-close) { color: #725747; }
+.app-container.design-theme .auth-prompt-text { font-size: 11px; }
+.app-container.design-theme .auth-prompt-signin { background: transparent; border: 1px solid #b79a83; color: #4a3020; border-radius: 999px; box-shadow: none; }
+.app-container.design-theme .auth-prompt-signin:hover { background: #f5e9dd; }
+
+/* Learning: retain the split reference / chat workspace and its resizing. */
+.app-container.design-theme .content:has(.learning-page-wrapper) { padding: 24px 28px; gap: 0; }
+.app-container.design-theme .learning-course-switch {
+  background: #28140d; color: #fffaf3; border: 0; border-radius: 16px 16px 0 0;
+  padding: 24px 28px; justify-content: space-between; gap: 16px;
+}
+.app-container.design-theme .learning-course-switch label { font-size: clamp(24px, 3vw, 42px); font-weight: 550; letter-spacing: -.03em; line-height: 1.1; }
+.app-container.design-theme .learning-course-switch select { background: #3d2418; color: #f6dfce; border: 1px solid #846047; border-radius: 999px; font-size: 12px; padding: 10px 14px; }
+.app-container.design-theme .learning-page-wrapper { border: 1px solid #dfcdbd; border-top: 0; border-radius: 0 0 16px 16px; background: #fffaf3; }
+.app-container.design-theme .learning-layout { background: #fffaf3; }
+.app-container.design-theme .chat-panel { background: var(--app-chat-panel-bg, #fffaf3); padding: 20px 24px; }
+.app-container.design-theme .right-panel { background: #f5ede3; border-color: #d9c8b9; }
+.app-container.design-theme :is(.reset-box button, .btn-show-textbook-panel, .left-panel-note-btn, .left-panel-hide-btn, .section-pages-nav button) { background: transparent; color: #74513d; border-color: #d9c8b9; border-radius: 999px; font-size: 11px; }
+.app-container.design-theme :is(.reset-box button, .btn-show-textbook-panel, .left-panel-note-btn, .left-panel-hide-btn):hover:not(:disabled) { background: #efddcc; color: #4b2b19; border-color: #bc8e70; }
+.app-container.design-theme .chat-example-label { color: #92725b; letter-spacing: .17em; font-size: 9px; }
+.app-container.design-theme .chat-example-chip { background: #f7eee3; color: #69452f; border: 1px solid #e2cebb; border-radius: 10px; box-shadow: none; padding: 12px 15px; }
+.app-container.design-theme .chat-example-chip:hover:not(:disabled) { background: #edd1ba; border-color: #b9825c; }
+.app-container.design-theme .learning-input-shell { background: #fffaf3; border: 1px solid #cdb39d; border-radius: 16px; box-shadow: 0 6px 30px #3921140b; }
+.app-container.design-theme .learning-input-shell:focus-within { border-color: #a95536; box-shadow: 0 0 0 3px #a955361c; }
+.app-container.design-theme .learning-send-btn { background: #a95536; color: white; border-radius: 10px; }
+.app-container.design-theme .learning-send-btn:hover:not(:disabled) { background: #783b26; }
+.app-container.design-theme .markdown-message--user { background: #563321; color: #fffaf3; border-radius: 16px 16px 3px 16px; }
+.app-container.design-theme .markdown-message:not(.markdown-message--user) { color: #38271e; }
+.app-container.design-theme :is(.chat-input-text, .lm-welcome-lead, .lm-welcome-steps, .lm-welcome-steps strong) { color: #38271e; }
+.app-container.design-theme :is(.input-icon-btn, .chat-input-text::placeholder) { color: #92745f; }
+.app-container.design-theme .resize-handle { background: #e7d8c9; }
+.app-container.design-theme .resize-handle:hover { background: #bc8b6c; }
+.app-container.design-theme .left-panel-topic-bar, .app-container.design-theme .section-pages-nav { background: #f5ede3; border-color: #d9c8b9; }
+
+/* Supporting workspaces use the same materials and typographic scale. */
+.app-container.design-theme .gr-page {
+  --paper: #f2e9df; --paper-card: #fffaf3; --ink: #28140d; --ink-soft: #79665a;
+  --navy: #28140d; --teal: #88472d; --teal-mid: #a95536; --teal-bright: #d49c77;
+  --rule: #dac8b9; --rule-strong: #b5957e; --serif: 'DM Sans', sans-serif;
+  --hand: 'DM Sans', sans-serif;
+  max-width: 1080px; padding: 16px 8px 64px;
+}
+.app-container.design-theme .content:has(.gr-page) { background: #f2e9df; }
+.app-container.design-theme .gr-head { background: #28140d; padding: 32px; border-radius: 16px; color: #fffaf3; }
+.app-container.design-theme :is(.gr-title, .gr-term, .gr-eyebrow) { color: #d9b8a1; }
+.app-container.design-theme .gr-course { font-size: clamp(28px, 3.7vw, 48px); font-weight: 550; letter-spacing: -.03em; color: #fffaf3; }
+.app-container.design-theme .gr-fr-mark { background: #563321; color: #f4d6bd; }
+.app-container.design-theme .gr-btn-primary { background: #a95536; border-radius: 999px; }
+.app-container.design-theme .gr-btn-primary:hover { background: #783b26; }
+.app-container.design-theme .gr-btn-ghost { border-radius: 999px; }
+.app-container.design-theme .gr-mockpill { color: #e6b391; border-color: #a87756; }
+.app-container.design-theme .autograder-page { padding: 0 0 32px; }
+.app-container.design-theme .autograder-page-inner { max-width: 1080px; gap: 22px; }
+.app-container.design-theme .autograder-hero { background: #28140d; padding: 32px; border-radius: 16px; text-align: left; }
+.app-container.design-theme .autograder-hero-title { color: #fffaf3; font-size: clamp(28px, 3.7vw, 48px); font-weight: 550; letter-spacing: -.03em; }
+.app-container.design-theme .autograder-hero-sub { color: #d9b8a1; margin: 12px 0 0; font-size: 13px; max-width: 560px; }
+.app-container.design-theme .autograder-card { border-radius: 16px; padding: 28px; gap: 20px; box-shadow: 0 10px 32px #44271208; }
+.app-container.design-theme .autograder-panel { border-radius: 10px; padding: 20px; }
+.app-container.design-theme .autograder-submit { border-radius: 999px; }
+.app-container.design-theme .autograder-file-row { flex-wrap: wrap; }
+.app-container.design-theme .autograder-file-status { flex-basis: 100%; }
+.app-container.design-theme .chat-input-text::placeholder { font-family: inherit; font-style: normal; }
+.app-container.design-theme .profile-page { max-width: 960px; padding: 0 0 40px; }
+.app-container.design-theme .profile-page-header { background: #28140d; padding: 32px; border-radius: 16px; }
+.app-container.design-theme .profile-page-title { font-family: inherit; font-size: clamp(28px, 3.7vw, 48px); font-weight: 550; letter-spacing: -.03em; color: #fffaf3; }
+.app-container.design-theme .profile-page-subtitle { color: #d9b8a1; }
+.app-container.design-theme .profile-card { background: #fffaf3; border-color: #dfcdbd; border-radius: 16px; padding: 28px; box-shadow: none; }
+.app-container.design-theme :is(.profile-card-title, .profile-email, .profile-setting-desc, .profile-muted, .profile-file-status, .profile-bg-swatch-label) { color: #79665a; }
+.app-container.design-theme :is(.profile-display-name, .profile-locale-option-label) { color: #38271e; }
+.app-container.design-theme .profile-avatar-placeholder { background: #563321; color: #f4d6bd; font-family: inherit; }
+.app-container.design-theme :is(.profile-locale-option, .profile-bg-swatch) { background: #fffaf3; border-color: #d9c8b9; color: #69452f; }
+.app-container.design-theme :is(.profile-locale-option--active, .profile-bg-swatch--active) { border-color: #a95536; background: #f1dfcf; box-shadow: 0 0 0 1px #a95536; }
+.app-container.design-theme :is(.profile-google-btn, .profile-file-choose-btn, .profile-textbook-sync-btn, .profile-locale-apply-all) { background: #563321; color: #fffaf3; border-color: #563321; border-radius: 999px; }
+.app-container.design-theme :is(.profile-textbook-reset-local-btn, .profile-signout-btn) { color: #88472d; border-color: #c5a68f; }
+.app-container.design-theme .my-learning-bar-page { color: #38271e; }
+.app-container.design-theme :is(.my-learning-bar-title, .my-learning-bar-book-link, .focs-node__label) { color: #88472d; }
+
+/* Authentication and tour are part of the same design, including from Home. */
+.app-container.design-theme .signin-overlay { background: #1f0d08a6; backdrop-filter: blur(8px); }
+.app-container.design-theme .signin-modal { background: #fffaf3; border-radius: 20px; box-shadow: 0 30px 100px #1c0d0866; }
+.app-container.design-theme .signin-brand { background: linear-gradient(155deg, #28140d, #6b3d25); }
+.app-container.design-theme :is(.signin-brand-icon, .signin-provider-icon--anon) { background: #6c4833; color: #f2ceb2; border-color: #a27758; }
+.app-container.design-theme .signin-brand-title { font-family: inherit; font-weight: 550; color: #fffaf3; }
+.app-container.design-theme .signin-brand-tagline { color: #e3bda1; }
+.app-container.design-theme .signin-title { font-family: inherit; font-weight: 550; letter-spacing: -.03em; color: #28140d; }
+.app-container.design-theme :is(.signin-subtitle, .signin-close, .signin-divider span) { color: #79665a; }
+.app-container.design-theme :is(.signin-provider-btn, .signin-input) { background: #fffaf3; border-color: #d9c8b9; color: #38271e; }
+.app-container.design-theme .signin-provider-btn:hover:not(:disabled) { background: #f1dfcf; border-color: #bc8b6c; }
+.app-container.design-theme .signin-submit-btn { background: #a95536; border-radius: 999px; }
+.app-container.design-theme :is(.signin-toggle-link, .signin-back-link) { color: #88472d; }
+.app-container.design-theme .onboarding-card { background: #fffaf3; color: #38271e; border-color: #cdb39d; }
+.app-container.design-theme .onboarding-tooltip { background: #fffaf3; color: #38271e; border-color: #cdb39d; }
+.app-container.design-theme :is(.onboarding-title, .onboarding-body) { color: #38271e; }
+.app-container.design-theme .onboarding-next { background: #a95536; color: white; }
+.app-container.design-theme .onboarding-skip { color: #79543e; }
+
+@media (min-width: 1400px) {
+  .app-container.design-theme:not(.app-container--home) .content { padding: 32px 44px; }
+}
+@media (max-width: 1000px) {
+  .app-container.design-theme .sb { --sb-w: 238px; }
+  .app-container.design-theme .sb-top { padding-inline: 10px; }
+  .app-container.design-theme .sb-brand-name { font-size: 15px; }
+  .app-container.design-theme .sb-tour-label { display: none; }
+  .app-container.design-theme:not(.app-container--home) .content { padding: 16px; }
+  .app-container.design-theme .learning-course-switch { padding: 22px 20px; }
+  .app-container.design-theme .chat-panel { padding: 14px; }
+}
+@media (max-width: 760px) {
+  .app-container.design-theme { flex-direction: row; }
+  .app-container.design-theme .sb { --sb-w: var(--sb-w-collapsed); --sb-w-collapsed: 58px; }
+  .app-container.design-theme .sb-top { flex-direction: column; padding: 14px 0; gap: 10px; }
+  .app-container.design-theme .sb-brand { flex: 0 0 auto; justify-content: center; }
+  .app-container.design-theme .sb-tour-btn { margin-left: 0; }
+  .app-container.design-theme .sb-shell { padding: 10px 6px; }
+  .app-container.design-theme :is(.sb-link, .sb-section-head, .sb-signin) { justify-content: center; padding: 11px 0; gap: 0; }
+  .app-container.design-theme .sb-footer { padding: 12px 6px; }
+  .app-container.design-theme .sb-user { justify-content: center; }
+  .app-container.design-theme .sb-section--progress.is-open.is-sized { flex: 0 0 auto; }
+  .app-container.design-theme .sb-section.is-open .sb-section-body { display: none; }
+}
+@media (max-width: 680px) {
+  .app-container.design-theme:not(.app-container--home) .content { padding: 8px; }
+  .app-container.design-theme :is(.gr-head, .profile-page-header, .autograder-hero) { padding: 24px 18px; }
+  .app-container.design-theme .learning-course-switch { padding: 20px 16px; gap: 12px; }
+  .app-container.design-theme .learning-course-switch select { width: 100%; }
+  .app-container.design-theme :is(.profile-card, .autograder-card) { padding: 18px; }
+  .app-container.design-theme .auth-prompt-inner { padding: 8px 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-container.design-theme *, .app-container.design-theme *::before, .app-container.design-theme *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
