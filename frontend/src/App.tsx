@@ -17,6 +17,7 @@ import { useAuth } from "./context/AuthContext";
 import "./App.css";
 import "./LearningTheme.css";
 import "./DesignTheme.css";
+import "./PanelTypography.css";
 
 function AppShell() {
   const showDeployWarning = apiBlockedByMixedContent();
