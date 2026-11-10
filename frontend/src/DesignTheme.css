@@ -162,6 +162,36 @@
 .app-container.design-theme .onboarding-next { background: #a95536; color: white; }
 .app-container.design-theme .onboarding-skip { color: #79543e; }
 
+/* Small architectural studies carry the home collage into working screens.
+   The artwork sits in reserved header space and never receives pointer input. */
+@keyframes workspace-study-float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-7px) rotate(1deg); }
+}
+@media (min-width: 760px) {
+  .app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header) {
+    position: relative;
+    padding-right: 140px;
+    min-height: 120px;
+    box-sizing: border-box;
+  }
+  .app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header)::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 35px);
+    width: 110px;
+    height: 74px;
+    background: url('/studio-study.svg') center / contain no-repeat;
+    pointer-events: none;
+    animation: workspace-study-float 9s ease-in-out infinite;
+    filter: drop-shadow(0 8px 8px #10080330);
+  }
+  .app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header):hover::after { animation-play-state: paused; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header)::after { animation: none; }
+}
 @media (min-width: 1400px) {
   .app-container.design-theme:not(.app-container--home) .content { padding: 32px 44px; }
 }
@@ -197,4 +227,8 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .app-container.design-theme *, .app-container.design-theme *::before, .app-container.design-theme *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+@media (min-width: 760px) {
+  .app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header) { padding-right: 140px; }
+  .app-container.design-theme .learning-course-switch { flex-wrap: wrap; }
 }
