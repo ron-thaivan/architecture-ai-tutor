@@ -39,6 +39,20 @@
 .ph-swatches i { flex:1; background:#f3d4b3; border-radius:3px; }
 .ph-swatches i:nth-child(2) { background:#c88965; }.ph-swatches i:nth-child(3) { background:#99573e; }.ph-swatches i:nth-child(4) { background:#58362a; }
 .ph-palette-foot { display:block; margin-top:12px; font-size:7px; letter-spacing:1.6px; color:#8e7667; }
+/* Offset rhythms give the architectural collage a gentle sense of depth. */
+@keyframes ph-float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(var(--ph-lift, -10px)) rotate(var(--ph-tilt, .5deg)); }
+}
+.ph-gallery :is(.ph-study, .ph-floating) { animation: ph-float 9s ease-in-out infinite; }
+.ph-gallery .ph-study--space { --ph-lift: -6px; --ph-tilt: -.3deg; animation-delay: -2s; }
+.ph-gallery .ph-study--form { --ph-lift: -12px; animation-duration: 11s; animation-delay: -5s; }
+.ph-gallery .ph-study--detail { --ph-lift: -8px; --ph-tilt: -.6deg; animation-delay: -4s; }
+.ph-gallery .ph-file { --ph-lift: -14px; --ph-tilt: -1deg; animation-duration: 7s; animation-delay: -1s; }
+.ph-gallery .ph-palette { --ph-lift: -12px; --ph-tilt: .8deg; animation-duration: 8s; animation-delay: -4s; }
+.ph-gallery:hover :is(.ph-study, .ph-floating) { animation-play-state: paused; }
+@media (max-width:640px) { .ph-gallery :is(.ph-study, .ph-floating) { --ph-lift: -6px; --ph-tilt: 0deg; } }
+@media (prefers-reduced-motion:reduce) { .ph-gallery :is(.ph-study, .ph-floating) { animation: none; } }
 .ph-hero-bottom { display:flex; justify-content:space-between; align-items:center; gap:25px; margin-top:18px; padding-top:18px; border-top:1px solid #573b2a; }
 .ph-hero-bottom p { margin:0; font-size:13px; line-height:1.6; color:var(--ph-muted); }
 .ph-hero-bottom strong { font-weight:400; color:var(--ph-paper); }
