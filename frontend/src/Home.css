@@ -50,7 +50,6 @@
 .ph-gallery .ph-study--detail { --ph-lift: -8px; --ph-tilt: -.6deg; animation-delay: -4s; }
 .ph-gallery .ph-file { --ph-lift: -14px; --ph-tilt: -1deg; animation-duration: 7s; animation-delay: -1s; }
 .ph-gallery .ph-palette { --ph-lift: -12px; --ph-tilt: .8deg; animation-duration: 8s; animation-delay: -4s; }
-.ph-gallery:hover :is(.ph-study, .ph-floating) { animation-play-state: paused; }
 @media (max-width:640px) { .ph-gallery :is(.ph-study, .ph-floating) { --ph-lift: -6px; --ph-tilt: 0deg; } }
 @media (prefers-reduced-motion:reduce) { .ph-gallery :is(.ph-study, .ph-floating) { animation: none; } }
 .ph-hero-bottom { display:flex; justify-content:space-between; align-items:center; gap:25px; margin-top:18px; padding-top:18px; border-top:1px solid #573b2a; }

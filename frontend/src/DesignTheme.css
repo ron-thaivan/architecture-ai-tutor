@@ -216,7 +216,6 @@
     animation: workspace-study-float 9s ease-in-out infinite;
     filter: drop-shadow(0 8px 8px #10080330);
   }
-  .app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header):hover::after { animation-play-state: paused; }
 }
 @media (prefers-reduced-motion: reduce) {
   .app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header)::after { animation: none; }
