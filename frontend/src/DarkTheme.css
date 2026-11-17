@@ -1,0 +1,105 @@
+/* Cool charcoal and pale-blue surfaces inspired by the Balance reference. */
+.app-container.design-theme {
+  --design-paper: var(--app-page-bg, #151d20);
+  --design-espresso: #151d20;
+  --night-panel: #252c2e;
+  --night-inset: #191e20;
+  --night-line: #506065;
+  --night-text: #e7eef1;
+  --night-muted: #b1bec2;
+  --learn-paper: #171c1e;
+  --learn-surface: #252c2e;
+  --learn-ink: #e7eef1;
+  --learn-muted: #b1bec2;
+  --learn-line: #506065;
+  --learn-green: #bbc6c9;
+  --learn-sage: #364144;
+  color-scheme: dark;
+  color: var(--night-text);
+}
+.app-container.design-theme .content .studio-page .studio-card > p { color: var(--night-muted); }
+.app-container.design-theme .content .studio-card .studio-next-step :is(h2, p) { color: var(--night-text); }
+.app-container.design-theme :is(.input-icon-btn, .signin-toggle-link, .signin-back-link) { color: #c8e0e8; }
+.app-container.design-theme .content .gr-page :is(.gr-fr-mark, .gr-fr-title) { color: #c8e0e8; }
+.app-container.design-theme .content :is(.studio-primary-tabs, .studio-activity-picker select) { background: #2b363a; border-color: #526166; }
+.app-container.design-theme .studio-primary-tabs button[aria-pressed="true"] { background: #cee5ed; border-color: #cee5ed; color: #172024; }
+.app-container.design-theme :is(.sb-link.is-active, .sb-hist-item.is-active) { background: #cee5ed; color: #172024; }
+.app-container.design-theme :is(.studio-card button:not(.studio-secondary), .learning-send-btn, .autograder-submit, .signin-submit-btn, .gr-btn-primary) { background: #cee5ed; border-color: #cee5ed; color: #172024; }
+.app-container.design-theme :is(.studio-card button:not(.studio-secondary), .learning-send-btn, .autograder-submit, .signin-submit-btn, .gr-btn-primary):hover:not(:disabled) { background: #a9ccd8; color: #172024; }
+.app-container.design-theme :is(.studio-simple-header, .learning-course-switch, .autograder-hero, .profile-page-header, .gr-head) { background: radial-gradient(ellipse at 85% 0%, #52666a55, transparent 65%), #182124; }
+.app-container.design-theme :is(.studio-simple-header h1, .learning-course-switch label, .autograder-hero-title, .profile-page-title, .gr-course) { color: #cee5ed; font-weight: 500; letter-spacing: -.045em; }
+.app-container.design-theme :is(.studio-card, .autograder-card, .profile-card, .learning-page-wrapper) { border-radius: 14px; }
+.app-container.design-theme .portfolio-home { background: #0b1114; }
+.app-container.design-theme .ph-shell { background: #182124; }
+.app-container.design-theme .ph-gallery { height: clamp(440px, 61vh, 640px); background: radial-gradient(ellipse at 50% 70%, #8ca4a338, transparent 70%); }
+.app-container.design-theme .ph-gallery h1 { top: 0; bottom: auto; font-size: clamp(100px, 17vw, 245px); line-height: .9; font-weight: 500; letter-spacing: -.07em; color: #cee5ed; }
+.app-container.design-theme .ph-study--space { left: 30%; top: auto; bottom: 0; width: 48%; height: 73%; opacity: .85; }
+.app-container.design-theme .ph-study--form { top: 37%; right: 0; width: 24%; height: 38%; }
+.app-container.design-theme .ph-study--detail { bottom: 0; left: 8%; width: 27%; height: 38%; }
+.app-container.design-theme .ph-file { top: 51%; left: 0; }
+.app-container.design-theme .ph-palette { top: auto; bottom: 3%; right: 0; }
+.app-container.design-theme .ph-floating { background: #dcebf0e8; color: #172024; backdrop-filter: blur(16px); border: 1px solid #ffffff30; box-shadow: 0 20px 50px #00000030; }
+.app-container.design-theme .ph-hero-bottom { background: #d1e6ed12; border: 1px solid #d1e6ed20; padding: 20px; border-radius: 5px; }
+.app-container.design-theme .ph-button--light { background: #cee5ed; color: #172024; }
+@media (max-width: 640px) {
+  .app-container.design-theme .ph-gallery { height: 390px; }
+  .app-container.design-theme .ph-gallery h1 { font-size: clamp(78px, 21vw, 130px); }
+  .app-container.design-theme .ph-study--space { left: 20%; width: 65%; height: 72%; }
+  .app-container.design-theme .ph-study--form { width: 30%; height: 28%; top: 25%; }
+  .app-container.design-theme .ph-file { top: 43%; }
+  .app-container.design-theme .ph-study--detail { width: 40%; left: 0; }
+}
+.app-container.design-theme :where(div, span, h1, h2, h3, h4, p, a, button, label, input, textarea, select, summary, li, th, td, small, strong, em, legend, figcaption):not(:where(.katex, .katex *, pre, pre *, code, code *)) {
+  font-family: var(--panel-font) !important;
+}
+.app-container.design-theme .content :is(.studio-card, .studio-item, .studio-project-controls, .learning-page-wrapper, .learning-layout, .chat-panel, .right-panel, .gr-page, .autograder-card, .profile-card, .my-learning-bar-page),
+.app-container.design-theme :is(.signin-modal, .onboarding-card, .onboarding-tooltip) {
+  background: var(--night-panel);
+  color: var(--night-text);
+  border-color: var(--night-line);
+}
+.app-container.design-theme .content :is(.studio-card, .studio-item, .studio-project-controls, .autograder-card, .profile-card, .my-learning-bar-page) :is(h1, h2, h3, h4, p, label, legend, li, td, summary),
+.app-container.design-theme :is(.signin-title, .signin-subtitle, .signin-close, .onboarding-title, .onboarding-body, .markdown-message, .lm-welcome-lead, .lm-welcome-steps) { color: var(--night-text); }
+.app-container.design-theme .content .studio-page .studio-card :is(input, textarea, select),
+.app-container.design-theme .content :is(input, textarea, select),
+.app-container.design-theme :is(.signin-input, .signin-provider-btn, .learning-input-shell, .chat-example-chip) {
+  background: var(--night-inset);
+  color: var(--night-text);
+  border-color: var(--night-line);
+}
+.app-container.design-theme .content :is(input, textarea)::placeholder { color: var(--night-muted); }
+.app-container.design-theme .content :is(.studio-pdf-upload, .studio-exercise-fold, .studio-requirements li, .studio-export-preview, .studio-next-step, .studio-ai-availability, .autograder-panel, .left-panel-topic-bar, .section-pages-nav) {
+  background: #2e373a;
+  color: var(--night-text);
+  border-color: var(--night-line);
+}
+.app-container.design-theme .content :is(.studio-card label span, .studio-card small, .studio-exercise-fold small, .studio-try-this, .profile-muted, .profile-setting-desc, .profile-email, .profile-card-title, .profile-file-status, .chat-example-label, .autograder-file-status) { color: var(--night-muted); }
+.app-container.design-theme .content :is(.studio-card a, .studio-help > summary, .studio-context > summary, .my-learning-bar-book-link, .focs-node__label, .my-learning-bar-title) { color: #bbc6c9; }
+.app-container.design-theme .content :is(.studio-secondary, .reset-box button, .profile-locale-option, .profile-bg-swatch, .btn-show-textbook-panel, .left-panel-note-btn, .left-panel-hide-btn) { background: #2e373a; color: var(--night-text); border-color: var(--night-line); }
+.app-container.design-theme .content :is(.profile-locale-option--active, .profile-bg-swatch--active) { background: #425054; border-color: #bbc6c9; }
+.app-container.design-theme .content :is(.profile-locale-option-label, .profile-display-name, .profile-bg-swatch-label) { color: var(--night-text); }
+.app-container.design-theme .content .studio-card input[type=file]::file-selector-button { background: #3e4b50; color: var(--night-text); border-color: #697f86; }
+.app-container.design-theme .content .studio-table th { background: #364144; color: var(--night-text); }
+.app-container.design-theme .content .gr-page {
+  --paper: #252c2e; --paper-card: #2e373a; --ink: #e7eef1; --ink-soft: #b1bec2;
+  --navy: #e7eef1; --teal: #bbc6c9; --rule: #506065; --rule-strong: #697f86;
+}
+.app-container.design-theme .auth-prompt { background: #262e30; border-color: #506065; }
+.app-container.design-theme :is(.auth-prompt-text, .auth-prompt-lock, .auth-prompt-close, .auth-prompt-signin) { color: #c3d5db; }
+.app-container.design-theme .portfolio-home { background: #131718; }
+.app-container.design-theme :is(.ph-tools, .ph-process) { background: #252c2e; color: #e7eef1; }
+.app-container.design-theme :is(.ph-tools p, .ph-process p, .ph-process li > span) { color: #b1bec2; }
+.app-container.design-theme .ph-tool { border-color: #506065; }
+.app-container.design-theme :is(.ph-tool--studio, .ph-tool:hover) { background: #364144; }
+.app-container.design-theme :is(.ph-floating, .ph-nav-account) { color-scheme: light; }
+.app-container.design-theme .chat-example-chip:hover:not(:disabled) { background: #364144; color: #eff4f5; }
+.app-container.design-theme .signin-provider-btn:hover:not(:disabled) { background: #364144; color: #eff4f5; }
+
+/* A text-only learning header should not reserve an empty illustration column. */
+.app-container.design-theme .studio-header:has(> .studio-header-copy:only-child) { grid-template-columns: minmax(0, 1fr); }
+.app-container.design-theme .studio-header h1 { color: #cee5ed; }
+.app-container.design-theme .studio-header-copy > p { line-height: 1.6; }
+.app-container.design-theme .signin-modal :is(h2, h3, label, input, textarea, select) { color: var(--night-text); }
+.app-container.design-theme .signin-modal :is(.signin-subtitle, .signin-divider span, .signin-close) { color: var(--night-muted); }
+.app-container.design-theme .markdown-message:not(.markdown-message--user) { color: var(--night-text); }
+.app-container.design-theme .studio-page > .studio-small { color: var(--night-muted); }

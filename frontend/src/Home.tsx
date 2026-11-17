@@ -5,50 +5,50 @@ import "./Home.css";
 function CourtyardStudy() {
   return <svg viewBox="0 0 500 530" aria-hidden="true" className="ph-art-svg">
     <defs>
-      <linearGradient id="ph-wall" x1="0" x2="1" y2="1"><stop stopColor="#80604b" /><stop offset=".55" stopColor="#bc8c68" /><stop offset="1" stopColor="#ead0ae" /></linearGradient>
-      <linearGradient id="ph-floor" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#edc6a0" /><stop offset="1" stopColor="#956145" /></linearGradient>
-      <linearGradient id="ph-sky" x1="0" y1="0" x2="0" y2="1"><stop stopColor="#e6d5c3" /><stop offset="1" stopColor="#f9e9d2" /></linearGradient>
-      <linearGradient id="ph-shadow"><stop stopColor="#301e16" /><stop offset="1" stopColor="#72503b" /></linearGradient>
+      <linearGradient id="ph-wall" x1="0" x2="1" y2="1"><stop stopColor="#596c72" /><stop offset=".55" stopColor="#85999f" /><stop offset="1" stopColor="#c6cfd2" /></linearGradient>
+      <linearGradient id="ph-floor" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#c0cacd" /><stop offset="1" stopColor="#60747a" /></linearGradient>
+      <linearGradient id="ph-sky" x1="0" y1="0" x2="0" y2="1"><stop stopColor="#cadadf" /><stop offset="1" stopColor="#dfe9ec" /></linearGradient>
+      <linearGradient id="ph-shadow"><stop stopColor="#1f2527" /><stop offset="1" stopColor="#4c5c61" /></linearGradient>
     </defs>
     <path fill="url(#ph-wall)" d="M0 0h500v530H0z" />
-    <path fill="#554335" d="M0 0h500L420 78H65z" />
+    <path fill="#3d494d" d="M0 0h500L420 78H65z" />
     <path fill="url(#ph-shadow)" d="M0 0 65 78v345L0 530z" />
     <path fill="url(#ph-floor)" d="M65 423h355l80 107H0z" />
-    <path fill="#513d30" d="M132 151h201v272H132z" />
+    <path fill="#394448" d="M132 151h201v272H132z" />
     <path fill="url(#ph-sky)" d="M143 161h180v252H143z" />
-    <path fill="#ad8462" d="m143 350 43-45 35 15 40-43 62 34v102H143z" />
-    <path fill="#7f684e" d="m143 371 67-25 54 23 59-38v82H143z" />
-    <path fill="#ceb391" d="M143 389h180v24H143z" />
-    <path fill="#f4d5aa" opacity=".75" d="m333 212 87-44v255l-87-10z" />
-    <path fill="#e8b886" d="m333 413 87 10 80 107H204z" />
-    <path fill="#694936" opacity=".6" d="m143 413 68 0-78 117H0z" />
-    <path fill="#d1b18a" d="M82 170h20v240H82z" /><path fill="#4e3a2d" d="M86 176h12v228H86z" />
-    <path stroke="#f2d3aa" opacity=".5" d="M65 423 0 530m68-107 8 107m114-107 78 107m89-107 99 107" />
-    <path fill="#b18b68" d="m340 374 62 3v22l-62-5z" /><path fill="#6d4a33" d="m340 394 62 5-12 25-50-5z" />
+    <path fill="#798f96" d="m143 350 43-45 35 15 40-43 62 34v102H143z" />
+    <path fill="#5a6d73" d="m143 371 67-25 54 23 59-38v82H143z" />
+    <path fill="#a6b4b9" d="M143 389h180v24H143z" />
+    <path fill="#c3d5db" opacity=".75" d="m333 212 87-44v255l-87-10z" />
+    <path fill="#aebbc0" d="m333 413 87 10 80 107H204z" />
+    <path fill="#465459" opacity=".6" d="m143 413 68 0-78 117H0z" />
+    <path fill="#a4b2b7" d="M82 170h20v240H82z" /><path fill="#364145" d="M86 176h12v228H86z" />
+    <path stroke="#c2d4da" opacity=".5" d="M65 423 0 530m68-107 8 107m114-107 78 107m89-107 99 107" />
+    <path fill="#7f939a" d="m340 374 62 3v22l-62-5z" /><path fill="#46555a" d="m340 394 62 5-12 25-50-5z" />
   </svg>;
 }
 
 function FormStudy() {
   return <svg viewBox="0 0 360 260" aria-hidden="true" className="ph-art-svg">
     <defs>
-      <linearGradient id="ph-rose" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#ebbcaa" /><stop offset="1" stopColor="#b86d56" /></linearGradient>
-      <linearGradient id="ph-arch"><stop stopColor="#894a37" /><stop offset=".5" stopColor="#cb8065" /><stop offset="1" stopColor="#e2a085" /></linearGradient>
-      <radialGradient id="ph-sphere" cx=".3" cy=".2"><stop stopColor="#ffe0c7" /><stop offset="1" stopColor="#b67158" /></radialGradient>
+      <linearGradient id="ph-rose" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#c4ced1" /><stop offset="1" stopColor="#798e95" /></linearGradient>
+      <linearGradient id="ph-arch"><stop stopColor="#54666c" /><stop offset=".5" stopColor="#8c9ea4" /><stop offset="1" stopColor="#aab8bd" /></linearGradient>
+      <radialGradient id="ph-sphere" cx=".3" cy=".2"><stop stopColor="#dce6ea" /><stop offset="1" stopColor="#798e95" /></radialGradient>
     </defs>
     <path fill="url(#ph-rose)" d="M0 0h360v260H0z" />
-    <ellipse cx="215" cy="218" rx="110" ry="18" fill="#914b39" opacity=".22" />
-    <path d="M123 212h151v10H123zm11-10h129v10H134zm12-10h105v10H146z" fill="#e7ac90" />
+    <ellipse cx="215" cy="218" rx="110" ry="18" fill="#596b71" opacity=".22" />
+    <path d="M123 212h151v10H123zm11-10h129v10H134zm12-10h105v10H146z" fill="#b3c0c4" />
     <path d="M160 192V77a40 40 0 0 1 80 0v115h-27V80a13 13 0 0 0-26 0v112z" fill="url(#ph-arch)" />
-    <path d="M213 192V81a13 13 0 0 0-26 0v111z" fill="#7c3e2e" />
+    <path d="M213 192V81a13 13 0 0 0-26 0v111z" fill="#4b5a5f" />
     <circle cx="97" cy="194" r="24" fill="url(#ph-sphere)" /><circle cx="267" cy="150" r="17" fill="url(#ph-sphere)" /><circle cx="89" cy="63" r="14" fill="url(#ph-sphere)" /><circle cx="132" cy="119" r="19" fill="url(#ph-sphere)" />
   </svg>;
 }
 
 function ApertureStudy() {
   return <svg viewBox="0 0 320 300" aria-hidden="true" className="ph-art-svg">
-    <defs><linearGradient id="ph-clay" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#da976e" /><stop offset=".55" stopColor="#ad6241" /><stop offset="1" stopColor="#623b2b" /></linearGradient></defs>
+    <defs><linearGradient id="ph-clay" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#99a9af" /><stop offset=".55" stopColor="#697e85" /><stop offset="1" stopColor="#3e4b4f" /></linearGradient></defs>
     <path fill="url(#ph-clay)" d="M0 0h320v300H0z" />
-    {[0, 1, 2, 3, 4, 5].map(i => <path key={i} d={`M${-85+i*19} 310C${-62+i*19} ${123+i*13} ${105+i*15} ${101+i*17} 340 ${94+i*26}`} fill="none" stroke={i % 2 ? "#c08d68" : "#edd2ad"} strokeWidth="11" />)}
+    {[0, 1, 2, 3, 4, 5].map(i => <path key={i} d={`M${-85+i*19} 310C${-62+i*19} ${123+i*13} ${105+i*15} ${101+i*17} 340 ${94+i*26}`} fill="none" stroke={i % 2 ? "#879aa1" : "#c1d3da"} strokeWidth="11" />)}
   </svg>;
 }
 
@@ -70,7 +70,7 @@ export default function Home() {
           <figure className="ph-study ph-study--detail"><ApertureStudy /><figcaption>03 / APERTURE</figcaption></figure>
           <div className="ph-floating ph-file"><span className="ph-file-thumb" aria-hidden="true"><ApertureStudy /></span><span>room for an idea<span className="ph-file-sub">A new perspective</span></span><span className="ph-file-check" aria-hidden="true">↗</span></div>
           <div className="ph-floating ph-palette"><span className="ph-palette-title">A study in possibilities</span><div className="ph-swatches" aria-hidden="true"><i /><i /><i /><i /></div><span className="ph-palette-foot">SPACE. LIGHT. FORM.</span></div>
-          <h1 id="ph-title">THINK.<br /><span>MAKE.</span></h1>
+          <h1 id="ph-title">Design.</h1>
         </div>
         <div className="ph-hero-bottom"><p>Start with a question.<br /><strong>See where it takes you.</strong></p><div className="ph-actions"><Link to="/studio" className="ph-button ph-button--light">Enter the studio <span aria-hidden="true">↗</span></Link><Link to="/learning" className="ph-text-link">{user ? "Continue learning" : "Explore Learning Mode"} <span aria-hidden="true">→</span></Link></div></div>
         {!loading && user && <p className="ph-account-note">Welcome back, {user.isAnonymous ? "Guest" : user.displayName || user.email}.</p>}

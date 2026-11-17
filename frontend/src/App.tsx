@@ -18,6 +18,7 @@ import "./App.css";
 import "./LearningTheme.css";
 import "./DesignTheme.css";
 import "./PanelTypography.css";
+import "./DarkTheme.css";
 
 function AppShell() {
   const showDeployWarning = apiBlockedByMixedContent();
