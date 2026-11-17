@@ -1,0 +1,72 @@
+/* Architectural depth around the tools; only decorative layers follow scroll. */
+.app-container.design-theme .app-main { position: relative; isolation: isolate; }
+.workspace-atmosphere { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: -1; }
+.atmosphere-orbit { position: absolute; width: 65vw; height: 65vw; right: -28vw; top: 12%; border: 1px solid #a6cbdc22; border-radius: 50%; transform: translateY(calc(var(--scene-depth, 0px) * -1)); box-shadow: 0 0 120px #a0c9d009, inset 0 0 100px #a0c9d008; }
+.atmosphere-orbit::after { content: ''; position: absolute; inset: 12%; border: 1px solid #a6cbdc14; border-radius: 50%; }
+.atmosphere-orbit::before { content: ''; position: absolute; width: 130px; height: 130px; top: 40%; left: -65px; border-radius: 50%; background: radial-gradient(circle at 30% 25%,#c4dde455,#50738220 50%,#15202400 75%); }
+.atmosphere-plane { position: absolute; width: 45%; height: 65%; left: -20%; top: 30%; border: 1px solid #b2d4de1a; background: linear-gradient(145deg,#b3cdd209,transparent); transform: translateY(var(--scene-depth, 0px)) rotate(calc(-25deg + var(--scene-turn, 0deg))); }
+.atmosphere-grid { position: absolute; bottom: -24%; right: -10%; width: 70%; height: 50%; background: repeating-linear-gradient(90deg, #a6cbdc0d 0 1px, transparent 1px 60px), repeating-linear-gradient(0deg, #a6cbdc0d 0 1px, transparent 1px 60px); transform: perspective(500px) rotateX(55deg) rotateZ(calc(-16deg + var(--scene-turn, 0deg))); mask-image: linear-gradient(transparent,#000); }
+.app-container.design-theme:not(.app-container--home) .content { background: transparent; }
+.app-container.design-theme .content :is(.studio-page, .profile-page, .autograder-page) { background: transparent; }
+.app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header) {
+  background: radial-gradient(ellipse at 80% 50%, #607f8b30, transparent 65%), linear-gradient(120deg,#19262c,#152024);
+  border-radius: 3px 3px 48px 3px;
+  border: 1px solid #b8d3db24;
+  border-top-color: #b8d3db55;
+  box-shadow: 0 24px 60px #00000022;
+  position: relative;
+  isolation: isolate;
+}
+.app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header)::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none; z-index: -1; border-radius: inherit;
+  background: linear-gradient(120deg, transparent 30%, #b9dce310 30.2%, transparent 65%), repeating-linear-gradient(90deg,transparent 0 89px,#b9dce307 90px);
+}
+.app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header)::after {
+  content: ''; position: absolute; width: 42%; height: 115%; top: -7%; right: -1%;
+  background: url('/architectural-composition.svg') center / contain no-repeat;
+  pointer-events: none; z-index: -1; animation: none;
+  transform: translateY(calc(var(--scene-depth, 0px) * .4)) rotate(var(--scene-turn, 0deg));
+  filter: drop-shadow(0 18px 18px #00000035);
+}
+.app-container.design-theme .content :is(.studio-card, .autograder-card, .profile-card) {
+  border: 1px solid #a9c8d02c; border-top: 2px solid #aecbd580;
+  border-radius: 3px 3px 24px 3px;
+  background: linear-gradient(135deg,#283539f5,#202b30f5);
+  box-shadow: 0 18px 50px #00000018;
+}
+.app-container.design-theme .studio-primary-tabs { border-radius: 4px; padding: 5px; border: 1px solid #a9c8d040; background: #19262c; }
+.app-container.design-theme .studio-primary-tabs button { border-radius: 2px; }
+.app-container.design-theme :is(.studio-card, .profile-card, .autograder-card) h2 { letter-spacing: -.025em; }
+.app-container.design-theme .studio-item { border-left: 2px solid #b8d3db70; }
+.app-container.design-theme .studio-nav button { background: #202e34; color: #c9dce3; border: 1px solid #a9c8d040; border-radius: 3px; }
+.app-container.design-theme .studio-nav button[aria-pressed="true"] { background: #c9dfe7; color: #17252b; }
+.app-container.design-theme .studio-nav button:hover { border-color: #c9dfe7; }
+.app-container.design-theme .gr-fr-card { background: linear-gradient(135deg,#26383f,#1b282e); border-radius: 3px 3px 40px 3px; border-top: 2px solid #b8d3db80; }
+.app-container.design-theme .chat-panel { background: radial-gradient(ellipse at 95% 10%,#52717a24,transparent 55%), #202b30; }
+.app-container.design-theme .chat-example-chip { border-radius: 3px 14px 3px 3px; border-left: 3px solid #9dbcc8; }
+.app-container.design-theme .studio-page .studio-small { color: #b1bec2; }
+.app-container.design-theme #studio-brief-help { color: #b1bec2; }
+.app-container.design-theme [data-workspace-route="/learning"] :is(.learning-course-switch, .studio-header)::after,
+.app-container.design-theme [data-workspace-route="/profile"] .profile-page-header::after,
+.app-container.design-theme [data-workspace-route="/autograder"] .autograder-hero::after { background-image: url('/architectural-layers.svg'); }
+/* Exercises have their own illustrated introduction; keep the course selector compact. */
+.app-container.design-theme .content:has(.studio-header) .learning-course-switch { min-height: 72px; padding: 14px 24px; border-radius: 3px; }
+.app-container.design-theme .content:has(.studio-header) .learning-course-switch::after { display: none; }
+@media (min-width: 1100px) {
+  .app-container.design-theme :is(.studio-header, .studio-simple-header, .gr-head, .autograder-hero, .profile-page-header) { min-height: 250px; padding: 40px 42% 40px 36px; }
+  .app-container.design-theme .studio-simple-header { flex-direction: column; gap: 18px; }
+  .app-container.design-theme :is(.studio-simple-header h1, .studio-header h1, .gr-course, .autograder-hero-title, .profile-page-title) { font-size: clamp(36px,3.6vw,58px); line-height: 1.05; }
+  .app-container.design-theme .learning-course-switch { min-height: 150px; padding: 28px 36% 28px 28px; gap: 16px; }
+  .app-container.design-theme .learning-course-switch::after { width: 32%; }
+}
+@media (min-width: 760px) and (max-width: 1099px) {
+  .app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header)::after { width: 145px; height: 150px; top: 10px; right: 0; }
+}
+@media (max-width: 759px) {
+  .app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header)::after { width: 130px; height: 130px; top: 0; right: -12px; opacity: .16; }
+  .atmosphere-grid { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-container.design-theme .workspace-atmosphere *,
+  .app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header)::after { transform: none; }
+}

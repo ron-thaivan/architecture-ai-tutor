@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { API_BASE, apiBlockedByMixedContent } from "./apiBase";
 import Home from "./Home";
@@ -10,6 +10,7 @@ import Grades from "./Grades";
 import StudioBrainstorm from "./StudioBrainstorm";
 import SignInModal from "./SignInModal";
 import Sidebar from "./components/Sidebar";
+import WorkspaceAtmosphere from "./components/WorkspaceAtmosphere";
 import OnboardingTour from "./components/OnboardingTour";
 import { OnboardingProvider } from "./context/OnboardingContext";
 import { useAuth } from "./context/AuthContext";
@@ -19,6 +20,7 @@ import "./LearningTheme.css";
 import "./DesignTheme.css";
 import "./PanelTypography.css";
 import "./DarkTheme.css";
+import "./WorkspaceMotion.css";
 
 function AppShell() {
   const showDeployWarning = apiBlockedByMixedContent();
@@ -26,11 +28,13 @@ function AppShell() {
   const [bannerDismissed, setBannerDismissed] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const contentRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className={`app-container design-theme app-container--studio-theme${isHome ? " app-container--home" : ""}`}>
       {!isHome && <Sidebar />}
-      <div className="app-main">
+      <div className="app-main" data-workspace-route={location.pathname}>
+        <WorkspaceAtmosphere content={contentRef} route={location.pathname} />
         {!isHome && showDeployWarning ? (
           <div className="deploy-config-banner" role="alert">
             <p>
@@ -63,7 +67,7 @@ function AppShell() {
           </div>
         )}
 
-        <div className="content">
+        <div className="content" ref={contentRef}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/autograder" element={<AutoGrader />} />

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 470" fill="none">
+  <defs>
+    <linearGradient id="sheet" x1="130" y1="60" x2="530" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#e5f1f1"/><stop offset="1" stop-color="#688690"/></linearGradient>
+    <linearGradient id="side"><stop stop-color="#465d66"/><stop offset="1" stop-color="#accbd3"/></linearGradient>
+    <radialGradient id="orb" cx=".3" cy=".2" r=".9"><stop stop-color="#eff6f4"/><stop offset=".5" stop-color="#b7cdd4"/><stop offset="1" stop-color="#39535f"/></radialGradient>
+    <radialGradient id="glow"><stop stop-color="#9fcedd" stop-opacity=".2"/><stop offset="1" stop-color="#9fcedd" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse cx="350" cy="230" rx="320" ry="210" fill="url(#glow)"/>
+  <g stroke="#b9dae5" stroke-width=".7" opacity=".22">
+    <ellipse cx="341" cy="245" rx="260" ry="125" transform="rotate(-25 341 245)"/>
+    <ellipse cx="341" cy="245" rx="220" ry="104" transform="rotate(-25 341 245)"/>
+    <path d="M70 340 340 180 610 330 340 460Z M140 380 410 220 M210 420 480 260 M140 300 410 420 M210 260 480 380 M340 15v440" stroke-dasharray="4 6"/>
+  </g>
+  <path d="m140 334 198-113 203 107-198 118Z" fill="#101e25" opacity=".7"/>
+  <path d="m142 305 196-113 205 107-200 119Z" fill="url(#sheet)"/>
+  <path d="m142 305 201 113v12L142 318Z" fill="#506b77"/>
+  <path d="m343 418 200-119v13L343 430Z" fill="url(#side)"/>
+  <path d="m142 232 196-113 205 107-200 119Z" fill="url(#sheet)" fill-opacity=".5" stroke="#c5e2e9"/>
+  <g stroke="#203943" opacity=".4"><path d="m182 232 157-90 164 84-160 95Z M223 208l163 87m-122-111 164 87m-122-111 164 87"/></g>
+  <path d="m142 157 196-113 205 107-200 119Z" fill="url(#sheet)"/>
+  <path d="m142 157 201 113v14L142 171Z" fill="#506b77"/>
+  <path d="m343 270 200-119v14L343 284Z" fill="url(#side)"/>
+  <ellipse cx="342" cy="157" rx="65" ry="38" fill="#273f49"/>
+  <ellipse cx="342" cy="164" rx="53" ry="28" fill="#557580"/>
+  <path d="m193 188 153 85m0 0 151-90M193 262l153 85 151-90" stroke="#e4f3f4" stroke-opacity=".5"/>
+  <circle cx="507" cy="346" r="48" fill="url(#orb)"/>
+  <circle cx="186" cy="76" r="21" fill="url(#orb)"/>
+  <g stroke="#c0dee5" stroke-opacity=".65"><path d="M101 160v146m-6-146h12m-12 146h12 M580 220v85m-6-85h12m-12 85h12 M294 54h72 M330 18v72"/></g>
+</svg>

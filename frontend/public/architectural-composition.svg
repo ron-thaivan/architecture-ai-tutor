@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 470" fill="none">
+  <defs>
+    <linearGradient id="stone" x1="120" y1="60" x2="470" y2="410" gradientUnits="userSpaceOnUse"><stop stop-color="#e3f2f4"/><stop offset=".45" stop-color="#9cafb3"/><stop offset="1" stop-color="#38494e"/></linearGradient>
+    <linearGradient id="edge"><stop stop-color="#59747c"/><stop offset="1" stop-color="#b8d3db"/></linearGradient>
+    <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#cce5eb" stop-opacity=".35"/><stop offset="1" stop-color="#cce5eb" stop-opacity=".03"/></linearGradient>
+    <radialGradient id="sphere" cx=".3" cy=".2" r=".85"><stop stop-color="#f1f7f6"/><stop offset=".4" stop-color="#b8ccd0"/><stop offset="1" stop-color="#30434b"/></radialGradient>
+    <radialGradient id="halo"><stop stop-color="#85a8b3" stop-opacity=".25"/><stop offset="1" stop-color="#85a8b3" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse cx="345" cy="245" rx="320" ry="220" fill="url(#halo)"/>
+  <g stroke="#b8d3db" opacity=".18" stroke-width=".7">
+    <path d="M30 339 320 177 650 346 359 464Z M78 366 368 202 M127 393 416 227 M175 420 465 252 M224 447 513 277 M75 314 405 438 M123 287 453 411 M171 260 501 384 M220 233 550 357"/>
+    <circle cx="355" cy="225" r="193"/><circle cx="355" cy="225" r="155"/>
+    <path d="M355 5V445 M135 225H575" stroke-dasharray="3 7"/>
+  </g>
+  <path d="m105 327 238-130 237 120-237 132Z" fill="#0b161b" opacity=".5"/>
+  <path d="m158 294 187-102 182 94-187 104Z" fill="url(#stone)"/>
+  <path d="m158 294 182 96v20l-182-96Z" fill="#5e777e"/>
+  <path d="m340 390 187-104v20L340 410Z" fill="#91abb3"/>
+  <g>
+    <path d="M254 290V142a81 81 0 0 1 162 0v148l-43 24V145a38 38 0 0 0-76 0v169Z" fill="url(#stone)"/>
+    <path d="m416 290 36-20V122a81 81 0 0 0-127-67 81 81 0 0 1 91 87Z" fill="url(#edge)"/>
+    <path d="M297 314V145a38 38 0 0 1 76 0v14a35 35 0 0 0-43-19v156Z" fill="#263a41"/>
+    <path d="M254 290V142a81 81 0 0 1 162 0" stroke="#e3f1f2" stroke-opacity=".65"/>
+  </g>
+  <path d="m415 177 116-63v172l-116 66Z" fill="url(#glass)" stroke="#bcd9e0" stroke-opacity=".6"/>
+  <path d="m424 192 98-53m-98 84 98-53m-98 83 98-53m-98 83 98-53m-98 83 98-53" stroke="#cbe3e8" stroke-opacity=".2"/>
+  <circle cx="202" cy="260" r="48" fill="url(#sphere)"/>
+  <circle cx="490" cy="71" r="21" fill="url(#sphere)"/>
+  <g stroke="#b9d8e0" stroke-width="1.2">
+    <path d="m120 148 52-29 52 28-52 30Z M120 148v57l52 29 52-30v-57 M172 177v57"/>
+    <path d="M106 100h57m-28-28v57 M527 352h63m-31-31v63" opacity=".5"/>
+  </g>
+  <g stroke="#d0e5e9" opacity=".55">
+    <path d="m248 343 96 50 109-60m-205 18 96 50 109-60m-205 18 96 50 109-60"/>
+    <path d="M80 265v-80m-5 0h10m-10 80h10 M472 409l100-56m-103 51 6 10m94-66 6 10"/>
+  </g>
+</svg>
