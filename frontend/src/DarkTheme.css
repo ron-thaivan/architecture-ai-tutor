@@ -51,8 +51,10 @@
 }
 .app-container.design-theme :where(*):not(:where(.katex, .katex *)) {
   font-family: var(--panel-font) !important;
+  font-weight: 700 !important;
 }
-.app-container.design-theme input::file-selector-button { font-family: var(--panel-font); }
+.app-container.design-theme input::file-selector-button { font-family: var(--panel-font); font-weight: 700; }
+.app-container.design-theme :is(input, textarea)::placeholder { font-weight: 700; }
 .app-container.design-theme .content :is(.studio-card, .studio-item, .studio-project-controls, .learning-page-wrapper, .learning-layout, .chat-panel, .right-panel, .gr-page, .autograder-card, .profile-card, .my-learning-bar-page),
 .app-container.design-theme :is(.signin-modal, .onboarding-card, .onboarding-tooltip) {
   background: var(--night-panel);
