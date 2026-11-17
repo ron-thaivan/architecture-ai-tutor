@@ -49,9 +49,10 @@
   .app-container.design-theme .ph-file { top: 43%; }
   .app-container.design-theme .ph-study--detail { width: 40%; left: 0; }
 }
-.app-container.design-theme :where(div, span, h1, h2, h3, h4, p, a, button, label, input, textarea, select, summary, li, th, td, small, strong, em, legend, figcaption):not(:where(.katex, .katex *, pre, pre *, code, code *)) {
+.app-container.design-theme :where(*):not(:where(.katex, .katex *)) {
   font-family: var(--panel-font) !important;
 }
+.app-container.design-theme input::file-selector-button { font-family: var(--panel-font); }
 .app-container.design-theme .content :is(.studio-card, .studio-item, .studio-project-controls, .learning-page-wrapper, .learning-layout, .chat-panel, .right-panel, .gr-page, .autograder-card, .profile-card, .my-learning-bar-page),
 .app-container.design-theme :is(.signin-modal, .onboarding-card, .onboarding-tooltip) {
   background: var(--night-panel);

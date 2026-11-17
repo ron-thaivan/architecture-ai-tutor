@@ -1,7 +1,7 @@
-/* Squarespace-inspired typography using a locally available sans-serif stack.
-   Keep code blocks and mathematical notation in their specialized fonts. */
+/* Shared site typography. Mathematical notation retains its rendering fonts. */
 .app-container.design-theme {
-  --panel-font: 'Helvetica Neue', Helvetica, Arial, 'Noto Sans Telugu', sans-serif;
+  --panel-font: 'Times New Roman', Times, serif;
+  font-family: var(--panel-font);
 }
 .app-container.design-theme :is(.studio-card, .studio-item, .studio-project-controls, .chat-panel, .right-panel, .gr-page, .autograder-card, .profile-card, .my-learning-bar-page, .signin-form, .signin-modal) {
   font-family: var(--panel-font);
