@@ -70,3 +70,178 @@
   .app-container.design-theme .workspace-atmosphere *,
   .app-container.design-theme :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header)::after { transform: none; }
 }
+
+/* An architectural model and a cropped detail form a pair of floating prints. */
+.app-main {
+  --model-print: url('/model-vault.png');
+  --detail-print: url('/model-screen.png');
+}
+.app-main:is([data-workspace-route="/learning"], [data-workspace-route="/grades"]) {
+  --model-print: url('/model-terrace.png');
+  --detail-print: url('/model-vault.png');
+}
+.app-main:is([data-workspace-route="/profile"], [data-workspace-route="/autograder"], [data-workspace-route="/learning-bar"]) {
+  --model-print: url('/model-screen.png');
+  --detail-print: url('/model-terrace.png');
+}
+
+.app-container.design-theme .content :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header, .gr-fr-card, .my-learning-bar-page:not(.my-learning-bar-page--embed)) {
+  position: relative;
+  isolation: isolate;
+  border-radius: 0;
+  border: 0;
+  border-block: 1px solid #a7b8b64a;
+  background: #20292a;
+  box-shadow: none;
+}
+.app-container.design-theme .content :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header, .gr-fr-card, .my-learning-bar-page:not(.my-learning-bar-page--embed))::after,
+.app-container.design-theme .content :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header, .gr-fr-card, .my-learning-bar-page:not(.my-learning-bar-page--embed))::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  inset: auto;
+  right: 6%;
+  top: 13%;
+  width: 30%;
+  height: auto;
+  aspect-ratio: 14 / 9;
+  max-height: 78%;
+  background: #d6d5c9 var(--model-print) center / cover no-repeat;
+  border: 3px solid #deded3;
+  border-radius: 0;
+  box-sizing: border-box;
+  opacity: 1;
+  z-index: -2;
+  transform: translateY(calc(var(--scene-depth, 0px) * .18)) rotate(3deg);
+  filter: none;
+  box-shadow: 1px 8px 14px #0004;
+}
+.app-container.design-theme .content :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header, .gr-fr-card, .my-learning-bar-page:not(.my-learning-bar-page--embed))::before {
+  z-index: -1;
+  top: 53%;
+  right: 25%;
+  width: 13%;
+  max-height: 41%;
+  aspect-ratio: 5 / 4;
+  background-image: var(--detail-print);
+  background-size: 155%;
+  transform: rotate(-7deg);
+}
+.app-container.design-theme .content .gr-fr-card,
+.app-container.design-theme .content .my-learning-bar-page:not(.my-learning-bar-page--embed) {
+  box-sizing: border-box;
+  padding-right: 42%;
+}
+.app-container.design-theme .content .my-learning-bar-page:not(.my-learning-bar-page--embed)::before { top: 90px; }
+.app-container.design-theme .content .my-learning-bar-page:not(.my-learning-bar-page--embed)::after { top: 28px; }
+.app-container.design-theme .content:has(.studio-header) .learning-course-switch::before { content: none; }
+
+@keyframes model-paper-float {
+  from { translate: -3px 5px; }
+  to { translate: 4px -7px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .app-container.design-theme .content :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header, .gr-fr-card, .my-learning-bar-page:not(.my-learning-bar-page--embed))::after {
+    animation: model-paper-float 6.4s ease-in-out infinite alternate;
+  }
+  .app-container.design-theme .content :is(.studio-simple-header, .studio-header, .learning-course-switch, .gr-head, .autograder-hero, .profile-page-header, .gr-fr-card, .my-learning-bar-page:not(.my-learning-bar-page--embed))::before {
+    animation: model-paper-float 4.8s -2s ease-in-out infinite alternate-reverse;
+  }
+}
+
+/* Treat the two navigation groups as a contents page. */
+@media (min-width: 761px) {
+  .app-container.design-theme .sb:not(.sb--collapsed) .sb-group-label {
+    text-transform: none;
+    letter-spacing: -.045em;
+    font-size: 26px;
+    line-height: 1.1;
+    color: #e3e4d9;
+    padding: 8px 5px 12px;
+    border-bottom: 1px solid #b3c4bd66;
+  }
+  .app-container.design-theme .sb:not(.sb--collapsed) :is(.sb-link,.sb-section-head) {
+    padding-inline: 6px;
+    border-radius: 0;
+    border-bottom: 1px solid #acbdb518;
+    font-size: 15px;
+    background: transparent;
+  }
+  .app-container.design-theme .sb:not(.sb--collapsed) .sb-link.is-active {
+    background: #dae0d6;
+    color: #1b2828;
+  }
+  .app-container.design-theme .sb:not(.sb--collapsed) .sb-link.is-active::before { display: none; }
+  .app-container.design-theme .sb:not(.sb--collapsed) :is(.sb-link,.sb-section-head):hover { background: #394746; color: #fff; }
+}
+.app-container.design-theme .content .studio-primary-tabs {
+  display: inline-flex; width: auto; max-width: 100%; gap: 0; border: none;
+  border-bottom: 1px solid #9aaea866; border-radius: 0; padding: 0; background: transparent;
+}
+.app-container.design-theme .content .studio-primary-tabs button {
+  background: transparent; color: #b6c2bd; border: 0; border-radius: 0;
+  border-bottom: 3px solid transparent; padding: 10px 18px;
+}
+.app-container.design-theme .content .studio-primary-tabs button[aria-pressed="true"] { color: #eff0e5; border-bottom-color: currentColor; }
+.app-container.design-theme .content :is(.studio-card,.profile-card,.autograder-card) {
+  border-radius: 0; border: 0; border-top: 1px solid #b7c5bc80; box-shadow: none; background: #263031;
+}
+@media (max-width: 1099px) {
+  .app-container.design-theme .content :is(.studio-simple-header,.studio-header,.learning-course-switch,.gr-head,.autograder-hero,.profile-page-header,.gr-fr-card,.my-learning-bar-page:not(.my-learning-bar-page--embed)) {
+    padding: 24px 24px 96px;
+  }
+  .app-container.design-theme .content :is(.studio-simple-header,.studio-header,.learning-course-switch,.gr-head,.autograder-hero,.profile-page-header,.gr-fr-card,.my-learning-bar-page:not(.my-learning-bar-page--embed))::after {
+    top: auto; bottom: 15px; right: 24px; width: 96px; height: 62px;
+  }
+  .app-container.design-theme .content :is(.studio-simple-header,.studio-header,.learning-course-switch,.gr-head,.autograder-hero,.profile-page-header,.gr-fr-card,.my-learning-bar-page:not(.my-learning-bar-page--embed))::before {
+    top: auto; bottom: 11px; right: 104px; width: 44px; height: 36px;
+  }
+  .app-container.design-theme .content .learning-course-switch { padding: 16px 120px 16px 16px; min-height: 92px; }
+  .app-container.design-theme .content .learning-course-switch::after { width: 72px; height: 47px; right: 15px; bottom: 24px; }
+  .app-container.design-theme .content .learning-course-switch::before { width: 32px; height: 27px; right: 75px; bottom: 16px; }
+  .app-container.design-theme .content:has(.studio-header) .learning-course-switch { padding: 16px; min-height: 60px; }
+  .app-container.design-theme .content .studio-primary-tabs button { padding-inline: 11px; }
+}
+
+/* Match the drawing on the desk to the selected stage of the studio project. */
+.studio-page:has(.studio-primary-tabs button:nth-child(2)[aria-pressed="true"]) {
+  --model-print: url('/model-screen.png');
+  --detail-print: url('/model-vault.png');
+}
+.studio-page:has(.studio-primary-tabs button:nth-child(3)[aria-pressed="true"]) {
+  --model-print: url('/model-terrace.png');
+  --detail-print: url('/model-screen.png');
+}
+@media (min-width: 761px) {
+  .app-container.design-theme .sb:not(.sb--collapsed) .sb-group-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .app-container.design-theme .sb:not(.sb--collapsed) .sb-group-label::after {
+    content: '';
+    width: 46px;
+    height: 28px;
+    margin-right: 5px;
+    border: 1px solid #d6d7ca;
+    background: url('/model-vault.png') center / cover;
+    transform: rotate(4deg);
+    pointer-events: none;
+  }
+  .app-container.design-theme .sb:not(.sb--collapsed) .sb-group-label--gap::after {
+    background-image: url('/model-terrace.png');
+    transform: rotate(-4deg);
+  }
+}
+@media (min-width: 761px) and (prefers-reduced-motion: no-preference) {
+  .app-container.design-theme .sb:not(.sb--collapsed) .sb-group-label::after {
+    animation: nav-print-drift 5s ease-in-out infinite alternate;
+  }
+  .app-container.design-theme .sb:not(.sb--collapsed) .sb-group-label--gap::after {
+    animation-delay: -3s;
+  }
+  @keyframes nav-print-drift {
+    from { translate: 0 2px; }
+    to { translate: 0 -3px; }
+  }
+}
